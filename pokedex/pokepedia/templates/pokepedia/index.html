@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Pokédex
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <div>
+                    <form>
+                        <label>Pokémon name or Id</label>
+                        <input type="text" id="name">
+                        <button type="submit" id="send">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector("#send");
+        btn.addEventListener("click", function(e){
+            e.preventDefault();
+
+            const name = document.querySelector("#name");
+
+            const value = name.value;
+
+            window.location.href = "http://127.0.0.1:8000/"+value;
+        })
+        // object.onsubmit = function(){myScript};
+    </script>
+{% endblock %}

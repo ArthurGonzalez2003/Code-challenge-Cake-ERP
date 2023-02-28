@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ data.name | title}}
+{% endblock %}
+
+{% block content %}
+{% include "pokepedia/includes/profile.html" %}
+{% endblock %}

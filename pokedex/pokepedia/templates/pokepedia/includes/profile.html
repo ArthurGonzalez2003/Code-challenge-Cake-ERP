@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ data.imglink }}" alt="{{ data.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ data.name | title }}</h5>
+                    <hr>
+                    <p> Abilities:   
+                        {% for ability in data.abilities %}
+                            <div class="btn btn-primary">{{ability}}</div>
+                        {% endfor %}
+                    </p>
+                    <p> Type:   
+                        {% for type in data.types %}
+                            <div class="btn btn-secondary">{{type}}</div>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+    </div>
+</div>
